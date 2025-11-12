@@ -19,8 +19,9 @@ dependencies {
     implementation(compose.desktop.currentOs)
     implementation(compose.material3)
     
-    // Kotlin Standard Library
-    implementation(kotlin("stdlib"))
+    // Lombok für Java
+    compileOnly("org.projectlombok:lombok:1.18.30")
+    annotationProcessor("org.projectlombok:lombok:1.18.30")
 }
 
 compose.desktop {
