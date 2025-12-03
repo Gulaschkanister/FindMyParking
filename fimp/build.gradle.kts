@@ -18,21 +18,22 @@ dependencies {
     // Compose Desktop
     implementation(compose.desktop.currentOs)
     implementation(compose.material3)
-    
+
     // Lombok für Java
     compileOnly("org.projectlombok:lombok:1.18.30")
     annotationProcessor("org.projectlombok:lombok:1.18.30")
+    implementation("org.knowm.xchart:xchart:3.8.2")
 }
 
 compose.desktop {
     application {
         mainClass = "de.hhek.ui.MainKt"
-        
+
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
             packageName = "FindMyParking"
             packageVersion = "1.0.0"
-            
+
             windows {
                 menuGroup = "FindMyParking"
                 upgradeUuid = "a4b3c2d1-e5f6-4a5b-8c7d-9e8f7a6b5c4d"
